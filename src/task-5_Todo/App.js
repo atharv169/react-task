@@ -4,6 +4,11 @@ import "./styles.css";
 export default function App() {
   const [todo, setTodo] = useState([]);
   const [text, setText] = useState("");
+
+  function handleDelete(indexToDelete) {
+    const newTodos = todo.filter((_, index) => index != indexToDelete);
+    setTodo(newTodos);
+  }
   return (
     <div className="App">
       <input
@@ -13,11 +18,23 @@ export default function App() {
         onChange={(e) => {
           setText(e.target.value);
         }}
-      ></input>
-      <button onClick={() => setTodo([...todo, text])}>Add</button>
+      />
+      <button
+        onClick={() => {
+          if (text.trim() === "") return;
+          setTodo([...todo, text]);
+          setText("");
+        }}
+      >
+        Add
+      </button>
+
       <div>
         {todo.map((item, index) => (
-          <p key={index}>{item}</p>
+          <div key={index}>
+            <spam>{item}</spam>
+            <button onClick={() => handleDelete(index)}>Delete</button>
+          </div>
         ))}
       </div>
     </div>
