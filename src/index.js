@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./task-1_counter/App";
+import App from "./task-2_toggle/App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
