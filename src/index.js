@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./task-8-useEffect_timer/App";
+import App from "./task-9-useEffect_apiFetch/App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
