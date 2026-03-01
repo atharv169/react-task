@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./task-9-useEffect_apiFetch/App";
+import App from "./task-10-useEffect_resize/App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
